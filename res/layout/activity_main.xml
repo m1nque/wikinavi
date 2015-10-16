@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="khc.wikinavi.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:id="@+id/findRoute"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#669999"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/departureSearch"
+                                    android:layout_width="148dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10" >
+                                </EditText>
+
+                                <Button
+                                    android:id="@+id/departureSearchBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:text="출발지조회" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/destSearch"
+                                    android:layout_width="148dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10" >
+                                </EditText>
+
+                                <Button
+                                    android:id="@+id/destSearchBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:text="도착지조회" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/selectMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:id="@+id/searchArea"
+                                android:layout_width="191dp"
+                                android:layout_height="wrap_content"
+                                android:ems="10" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/searchBtn"
+                                android:layout_width="98dp"
+                                android:layout_height="34dp"
+                                android:text="Search" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:id="@+id/mapScrollView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fillViewport="true" >
+
+                            <ListView
+                                android:id="@+id/mapListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+                            </ListView>
+                        </ScrollView>
+ 	
+                    </LinearLayout>
+ 
+                    <LinearLayout
+                        android:id="@+id/viewMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지도보기" />
+
+                    </LinearLayout>
+ 
+
+                    <LinearLayout
+                        android:id="@+id/moreView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+ 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="더보기" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+ 
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                </TabWidget>
+
+            </LinearLayout>
+
+        </TabHost>
+    </LinearLayout>
+
+</RelativeLayout>
