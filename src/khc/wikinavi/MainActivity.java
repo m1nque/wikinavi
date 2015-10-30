@@ -22,6 +22,7 @@ public class MainActivity extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		int testcode = 0;
 
 		TabHost tabHost = getTabHost();
 
@@ -51,7 +52,7 @@ public class MainActivity extends TabActivity {
 		data.add(newEngineering);
 		data.add(wonHeung);
 		data.add(sangRok);
-
+		
 		MapListAdapter mla = new MapListAdapter(this, R.layout.item, data);
 		selectMapList.setAdapter(mla);
 
