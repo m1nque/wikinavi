@@ -2,6 +2,8 @@ package khc.wikinavi;
 
 import java.util.ArrayList;
 
+import com.wizturn.sdk.central.CentralManager;
+
 import android.app.Activity;
 import android.app.TabActivity;
 import android.os.Bundle;
@@ -22,7 +24,10 @@ public class MainActivity extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		int testcode = 0;
+		
+		// get instance of CentralManager(비콘 신호 받는 매니져)
+		CentralManager centralManager = CentralManager.getInstance(getApplicationContext());
+	
 
 		TabHost tabHost = getTabHost();
 
